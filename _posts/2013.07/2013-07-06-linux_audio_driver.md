@@ -5,7 +5,6 @@ category : linux
 tagline:  
 tags : [audio, driver]
 ---
-{% include JB/setup %}
 
 
 安装声卡驱动

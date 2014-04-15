@@ -5,7 +5,6 @@ category : git
 tagline:  
 tags : [git]
 ---
-{% include JB/setup %}
 
 [**Git 在线教学**](http://pcottle.github.io/learnGitBranching/)
 

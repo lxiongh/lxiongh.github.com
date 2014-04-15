@@ -5,7 +5,6 @@ category : python
 tagline:  
 tags : [lib, python]
 ---
-{% include JB/setup %}
 
 ## VLFeat
 

@@ -5,7 +5,6 @@ category : others
 tagline: 
 tags : [teamviewer]
 ---
-{% include JB/setup %}
 
 # Teamviewer 在 Debian 7 下的安装
 

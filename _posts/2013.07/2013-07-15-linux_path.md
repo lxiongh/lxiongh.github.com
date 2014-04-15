@@ -5,7 +5,6 @@ category : linux
 tagline:  
 tags : [path, linux]
 ---
-{% include JB/setup %}
 
 # 使用命令`echo`显示环境变量
 

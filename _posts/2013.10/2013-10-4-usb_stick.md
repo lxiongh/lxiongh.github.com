@@ -5,7 +5,6 @@ category : others
 tagline: 
 tags : [USB stick, linux]
 ---
-{% include JB/setup %}
     
 # 从U盘安装Debian
 

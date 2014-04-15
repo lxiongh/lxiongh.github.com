@@ -5,7 +5,6 @@ category : latex
 tagline:  
 tags : [latex, image]
 ---
-{% include JB/setup %}
 
 
 在[Markdown](http://lxiongh.github.io/github/2013/05/09/markdown/)语法中，图片不能并排插入，也不能调整大小。要想实现图片的并排，并插入latex语句，再用[pandoc](http://lxiongh.github.io/linux/2013/05/10/Pandoc/)文件格式转换工具将md格式转换为目标格式（如pdf），此外还需在latex的模板中加入包`\usepackage{graphicx}`, `\usepackage{subfigure}`

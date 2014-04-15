@@ -5,7 +5,6 @@ category : github
 tagline:  
 tags : [github, Images]
 ---
-{% include JB/setup %}
 
 
 问题描述

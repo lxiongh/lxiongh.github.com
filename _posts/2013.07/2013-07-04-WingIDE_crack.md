@@ -5,7 +5,6 @@ category : python
 tagline: 
 tags : [WingIDE, python, crack]
 ---
-{% include JB/setup %}
 
 # WingIDE 破解
 

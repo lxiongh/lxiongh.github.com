@@ -5,7 +5,6 @@ category : python
 tagline:  
 tags : [python, book]
 ---
-{% include JB/setup %}
 
 # [9本免费的Python语言编程书籍](http://linuxtoy.org/archives/9-free-python-books.html)
 

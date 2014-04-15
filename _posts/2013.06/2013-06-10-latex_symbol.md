@@ -5,7 +5,6 @@ category : latex
 tagline:  
 tags : [latex, 符号]
 ---
-{% include JB/setup %}
 
 [转至](http://hi.baidu.com/njit_pk/item/440d0a7fef30b4366dc37c22)
 

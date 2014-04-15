@@ -5,7 +5,6 @@ category : linux
 tagline: 
 tags : [desktop]
 ---
-{% include JB/setup %}
 
 [转至](http://www.wokeke.com/?p=184)
 

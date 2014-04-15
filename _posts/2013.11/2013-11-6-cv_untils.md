@@ -5,7 +5,6 @@ category : research
 tagline: 
 tags : [Computer Vision, 工具, optimization, convex]
 ---
-{% include JB/setup %}
     
 *下面的内容是我在做CVPR2014时用到的工具，其中包括一些图片特征的提取，及优化的工具包*
 

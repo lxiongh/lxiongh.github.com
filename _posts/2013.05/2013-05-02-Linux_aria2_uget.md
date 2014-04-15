@@ -5,7 +5,6 @@ category : linux
 tagline:  
 tags : [aria2, uget, dowload]
 ---
-{% include JB/setup %}
 
 ## Linux下的多线程下载工具
 [Edit From](http://northcamel.com/uget-installed-and-enabled-aria2-plug/)   

@@ -5,7 +5,6 @@ category : python
 tagline:  
 tags : [lib, python]
 ---
-{% include JB/setup %}
 
 # [用Python做科学计算](http://hyry.dip.jp/tech/book/page/scipy/index.html)
 
