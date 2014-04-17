@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 数据驱动下的图像场景分析
-category : latex
+category : research
 tagline: 
 tags : [Scene Parsing, Algorithm]
 ---
