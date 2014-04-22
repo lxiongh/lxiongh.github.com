@@ -9,7 +9,7 @@ tags : [video, others]
 有的时候，我们需要在网页里插入一些视频，来更好的渲染主题。下面的一段代码展示了该如何在网页里插入一段优酷视频。
 
 {% highlight html %}
-<embed src=http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMjQ5OTk1MTQ4&winType=adshow&isAutoPlay=true 
+<embed src=http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMjQ5OTk1MTQ4&winType=adshow&isAutoPlay=false 
 quality="high" width="580" height="435" align="middle" allowScriptAccess="never" allowNetworking="internal" 
 allowfullscreen="true" autostart="0" type="application/x-shockwave-flash"></embed>
 {% endhighlight %}
