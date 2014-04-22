@@ -27,6 +27,6 @@ allowfullscreen="true" autostart="0" type="application/x-shockwave-flash"></embe
 
 视频示例《把我留下》
 
-<embed src=http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMjQ5OTk1MTQ4&winType=adshow&isAutoPlay=true 
+<embed src=http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMjQ5OTk1MTQ4&winType=adshow&isAutoPlay=false 
 quality="high" width="580" height="435" align="middle" allowScriptAccess="never" allowNetworking="internal" 
 allowfullscreen="true" autostart="0" type="application/x-shockwave-flash"></embed>
