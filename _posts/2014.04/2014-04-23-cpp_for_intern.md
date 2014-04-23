@@ -14,7 +14,7 @@ F10 -> 逐过程
 
 F10 -> 逐语句
 
-[more information about VS hotkey](http://www.cnblogs.com/update158/articles/f23465.html)
+[More Information about VS hotkey](http://www.cnblogs.com/update158/articles/f23465.html)
 
 ---
 
@@ -47,3 +47,5 @@ main()
   strcpy(p1, "123456"); //123456\0放在常量区，编译器可能会将它与p3所指向的"123456"优化成一个地方。 
 }
 {% endhighlight %}
+
+[More Information about This Problem](http://blog.renren.com/share/313938359/7254081401)
