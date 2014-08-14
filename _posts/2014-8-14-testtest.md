@@ -8,6 +8,8 @@ published: true
 ---
 
 
+<HTML>
+<P>
 <OBJECT
   id="pmlxflash"
     classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
@@ -19,3 +21,4 @@ published: true
 >
 <param name= "Movie" value="http://lxiongh.qiniudn.com/aa.swf">
 </OBJECT>
+</HTML>
