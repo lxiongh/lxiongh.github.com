@@ -1,9 +1,9 @@
 --
 layout: post
 title:  基于ACCESS的数据查询及处理软件
-category : Project
+category: Project
 tagline: 
-tags : [ACCESS, VB]
+tags: [ACCESS VB]
 published: true
 ---
 
