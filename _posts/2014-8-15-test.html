@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2014-8-15-test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<hr />
+<p>layout: post
+title:  基于ACCESS的数据查询及处理软件
+category: Project
+tagline: 
+tags: [ACCESS VB]</p>
+<h2>published: true</h2>
+<p>这是我在IBM实习期间做的每一个任务，历时将近一个月，此文对这个项目做一些总结，并记录下其中遇到到的一些问题，及其相应的解决方法。</p>
+<hr />
+<h2>背景介绍</h2>
+<p>在IBM，ADMIN的工作往往是伴随着众多的表格，里面记录着IBM卖出设备的详细信息。ADMIN平时的工作就是要根据他人的需求来查询相应的信息，如：查询还在维保里的机器？ 查询该主柜有哪些扩展分区？ 等一些特定的查询需求。在此之前，ADMIN对此信息的查询都是在EXCEL表格下完成的，效率重复低下，急需一种快捷方便的查询方式。正在是基于这样一种需求，我的任务就是写一个小软件，做到能够完成这种常见的信息查询。</p>
+<hr />
+<h2>需求分析</h2>
+<p>首先，ADMIN将提供两张表，分别是“机器汇总表”及“分区表”。 其中“机器汇总表”中记录了所有设备的详细信息（包括所有类型的设备，如小型机、磁盘阵列等），另外“分区表”记录了小型机或者刀片机的分区信息（相当于PC的硬盘分区），所有的信息都记录在这两张表里。</p>
+<p>注意到，“机器汇总表”里包含了不同类型的设备信息，而不类型的设备信息除享有共同的字段外（如序列号、组长、MA开始时间等），还具有各自的特有属性（如小型机有CPU个数、CPU信息描述等，而光纤交换机有端口数量等）。为了有效地保存数据，消除不必要的字段冗余，需求先将“机器汇总表”按照设备类型来拆分成不同的表。同时另建一张表来保存共有的字段属性。设备特有的属性保存在拆分后对应的表中。</p>
+<p>表拆分后，作后续的查询，需要将表以关键字连接在一起，作表间的联合查询。可以利用ACCESS方便地实现这种功能，其不仅提供了方便的查询设计方便，还提供了窗口式的UI交互设计方案，而且所有还内嵌了VBA的支持。所以方案自然而然也就是基于ACCESS来实现所有的功能。</p>
+<hr />
+<h2>表的设计</h2>
+<p>前面提到，要将“机器汇总表”以设备类型分拆成不同的表，同时还有一个共有字段属性的表，具体的拆分如下。</p>
+<p>分区表<em>（小型机或者刀片机的分区信息）</em></p>
+<blockquote>
+<p><strong>ID</strong>, 序列号, 设备用途_主机名, 当前版本, 建议版本, IP地址, IP地址1, IP地址2, IP地址3, 承载业务, CPU个数, 内存大小, 默认网关, 具备测试环境, 优先级, 必要性, 集成商</p>
+</blockquote>
+<p>订单列表 <em>（共有字段属性表）</em></p>
+<blockquote>
+<p><strong>序列号</strong>, 服务器类型, 设备俗称, 系统类型, 组长, 设备管理IP, 微码版本, 远程监控, 应急预案, MT, MD, 机房名称, 楼层, 机架位置, 审批人, 客户ID, 安装日期, Wty_ExpDate, MA开始, MA结束, AIX服务, 2012维保, 2013维保, ..., 2020维保</p>
+</blockquote>
+<p>磁带库磁带机表<em>（特有字段属性表）</em></p>
+<blockquote>
+<p><strong>序列号</strong>, 驱动器型号, 驱动器数量, 磁带数量</p>
+</blockquote>
+<p>磁盘阵列表<em>（特有字段属性表）</em></p>
+<blockquote>
+<p><strong>序列号</strong>, 主柜或扩展柜, 所属主柜, 磁盘描述, 磁盘个数, 裸容量, 有效容量, RAID_LEVEL, 磁盘类型1, 数量1, 磁盘类型2, ..., 磁盘类型4, 数量4, 磁盘微码</p>
+</blockquote>
+<p>光纤交换机表<em>（特有字段属性表）</em></p>
+<blockquote>
+<p><strong>序列号</strong>, 端口数量</p>
+</blockquote>
+<p>控制台表<em>（特有字段属性表）</em></p>
+<blockquote>
+<p><strong>序列号</strong>, HMC系统版本, Service_Pack</p>
+</blockquote>
+<p>小型机刀片机表<em>（特有字段属性表）</em></p>
+<blockquote>
+<p><strong>序列号</strong>, CPU信息描述, CPU个数, CPU主频, 内存大小, 内置硬盘大小</p>
+</blockquote>
+<hr />
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
