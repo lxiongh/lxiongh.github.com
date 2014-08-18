@@ -67,11 +67,11 @@ Properties:
 ![][fig3]
 
 
-[fig1]: http://lxiongh.qiniudn.com/blog/2014-8-15/fig1.png
-[fig2]: http://lxiongh.qiniudn.com/blog/2014-8-15/fig2.png
-[fig3]: http://lxiongh.qiniudn.com/blog/2014-8-15/fig3.png
-[autECLPSMethods]: http://lxiongh.qiniudn.com/blog/2014-8-15/autECLPSMethods.png
-[Properties]: http://lxiongh.qiniudn.com/blog/2014-8-15/Properties.png
+[fig1]: http://lxiongh.qiniudn.com/blog/2014-8-15/fig1.png-mark
+[fig2]: http://lxiongh.qiniudn.com/blog/2014-8-15/fig2.png-mark
+[fig3]: http://lxiongh.qiniudn.com/blog/2014-8-15/fig3.png-mark
+[autECLPSMethods]: http://lxiongh.qiniudn.com/blog/2014-8-15/autECLPSMethods.png-mark
+[Properties]: http://lxiongh.qiniudn.com/blog/2014-8-15/Properties.png-mark
 
 
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
