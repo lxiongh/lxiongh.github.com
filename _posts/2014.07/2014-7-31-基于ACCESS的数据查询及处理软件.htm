@@ -175,7 +175,7 @@ body {
   </tr>
 </table>
 <p>注：除了日期字段的类型为日期外，其他所有字段的类型皆为<strong>文本</strong>。	</p>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/table_design.jpg" alt="" width="696" height="296" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/table_design.jpg-mark" alt="" width="696" height="296" /></p>
 <hr />
 <h2>实现功能</h2>
 <p>表的字段设计好后，就可以方便地进行多表的联合查询，这也是ACCESS所善长的。首先给出系统的一个小Demo，展示了一些简单的功能。</p>
@@ -210,7 +210,7 @@ body {
 <p>&nbsp;</p>
 <hr />
 <h3>1. 设备的新建</h3>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/new_devices.jpg" alt="" width="509" height="117" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/new_devices.jpg-mark" alt="" width="509" height="117" /></p>
 <p>新建设备的代码比较简单，添加按键事件，针对不同的类型打开不同的窗口，控制台及刀片机新建的代码示例如下。</p>
 <pre class="prettyprint lang-bsh">
 Private Sub cmdNewControl_Click()
@@ -225,7 +225,7 @@ DoCmd.OpenForm "小型机刀片机详细信息", acNormal, , , acFormAdd
 [Forms]![小型机刀片机详细信息]![服务器类型].DefaultValue = Chr(39) & "刀片机" & Chr(39)
 End Sub</pre>
 <h3>		2. 批量导入与导出功能</h3>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/config_file.jpg" alt="" width="262" height="171" /> <img src="http://lxiongh.qiniudn.com/blog/2014-7-31/import_data.jpg" alt="" width="500" height="157" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/config_file.jpg-mark" alt="" width="262" height="171" /> <img src="http://lxiongh.qiniudn.com/blog/2014-7-31/import_data.jpg-mark" alt="" width="500" height="157" /></p>
 <p>批量导入与导出数据时存在一个问题，就是如何将EXCEL表中的字段灵活地对应到表中的字段。因为EXCEL表中的字段所处列的位置可能是变化的，所以不能在程序中固定字段的位置。这里设计了一个配置文件，可配置数据库表中不同字段在EXCEL表中列的位置，文件如上图所示。当进行批量导入数据操作时，首先读取配置文件信息，再读取对应的EXCEL数据，导入到ACCESS表中即可。</p>
 <p>其中读取EXCEL数据的关键代码为：</p>
 <pre class="prettyprint lang-bsh">
@@ -241,7 +241,7 @@ CurrentProject.AccessConnection.Execute sql, , ExecuteOptionEnum.adExecuteNoReco
 
 </pre>
 <h3>3. 根据分区主机名反查主机序列号</h3>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/search_by_name.jpg" alt="" width="419" height="219" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/search_by_name.jpg-mark" alt="" width="419" height="219" /></p>
 <p>根据分区的主机名，查询其所在设备的序列号，以及列出该设备的所有分区信息。在设备用途_主机名下拉框的更新事件中填入代码：</p>
 <pre class="prettyprint lang-bsh">
 Private Sub 设备用途_主机名_AfterUpdate()
@@ -257,7 +257,7 @@ End Sub
 
 </pre>
 <h3>4. 主柜与扩展柜查询</h3>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/search_extend.jpg" alt="" width="420" height="164" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/search_extend.jpg-mark" alt="" width="420" height="164" /></p>
 <p>输入主柜序列号，查询得到该主柜的所有扩展柜信息。同样在主柜序列号事件更新处加入代码：</p>
 <pre class="prettyprint lang-bsh">
 Private Sub comboSN_AfterUpdate()
@@ -268,13 +268,13 @@ Me.主柜扩展柜连接.Form.FilterOn = True
 End Sub
 </pre>
 <h3>5. 导出列表中的指定数据</h3>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/export_list_data.jpg" alt="" width="416" height="141" /> <img src="http://lxiongh.qiniudn.com/blog/2014-7-31/list_file.jpg" alt="" width="132" height="149" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/export_list_data.jpg-mark" alt="" width="416" height="141" /> <img src="http://lxiongh.qiniudn.com/blog/2014-7-31/list_file.jpg-mark" alt="" width="132" height="149" /></p>
 <p>指定导出列表中的数据，所有字段紧凑存储至EXCEL表中。</p>
 <h3>6. 数据透视图及数据透视表</h3>
 <p>数据透视图示例，所有操作都跟EXCEL的透视图及透视表一样。</p>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/data_fig.jpg" alt="" width="739" height="440" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/data_fig.jpg-mark" alt="" width="739" height="440" /></p>
 <p>数据透视表示例</p>
-<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/data_table.jpg" alt="" width="742" height="190" /></p>
+<p><img src="http://lxiongh.qiniudn.com/blog/2014-7-31/data_table.jpg-mark" alt="" width="742" height="190" /></p>
 <p>&nbsp;</p>
 <p></p>
 <script type="text/javascript">
