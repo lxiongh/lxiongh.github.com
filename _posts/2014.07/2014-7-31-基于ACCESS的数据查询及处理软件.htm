@@ -229,7 +229,6 @@ End Sub</pre>
 <p>批量导入与导出数据时存在一个问题，就是如何将EXCEL表中的字段灵活地对应到表中的字段。因为EXCEL表中的字段所处列的位置可能是变化的，所以不能在程序中固定字段的位置。这里设计了一个配置文件，可配置数据库表中不同字段在EXCEL表中列的位置，文件如上图所示。当进行批量导入数据操作时，首先读取配置文件信息，再读取对应的EXCEL数据，导入到ACCESS表中即可。</p>
 <p>其中读取EXCEL数据的关键代码为：</p>
 <pre class="prettyprint lang-bsh">
-Private Sub cmdNewControl_Click()
 Set xlApp = CreateObject("Excel.Application") '创建EXCEL对象
 xlApp.DisplayAlerts = False '不进行安全提示
 Set xlBook = xlApp.Workbooks.Open(fn) '打开已经存在的EXCEL工件簿文件
@@ -237,7 +236,6 @@ xlApp.Visible = False '设置EXCEL对象可见（或不可见）
 </pre>
 <p>往ACCESS现有表中插入数据的关键代码为：</p>
 <pre class="prettyprint lang-bsh">
-Private Sub cmdNewControl_Click()
 sql = "INSERT INTO 磁带库磁带机表 (" & fields & ") VALUES (" & values & ")" '生成SQL语句
 CurrentProject.AccessConnection.Execute sql, , ExecuteOptionEnum.adExecuteNoRecords '执行SQL语句
 
