@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FetionSDK</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #4E5869;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ 元素/标签选择器 ~~ */
+ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定需要的数值，也可以在列表所包含的列表项（LI、DT 和 DD）中指定需要的数值。请注意，除非编写一个更为具体的选择器，否则您在此处进行的设置将会层叠到 .nav 列表。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 删除上边距可以解决边距会超出其包含的 div 的问题。剩余的下边距可以使 div 与后面的任何元素保持一定距离。 */
+	padding-right: 15px;
+	padding-left: 15px; /* 向 div 内的元素侧边（而不是 div 自身）添加填充可避免使用任何方框模型数学。此外，也可将具有侧边填充的嵌套 div 用作替代方法。 */
+}
+a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+	border: none;
+}
+
+/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+	text-decoration: none;
+}
+
+/* ~~ 此容器包含所有其它 div，并依百分比设定其宽度 ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* 可能需要最大宽度，以防止此布局在大型显示器上过宽。这将使行长度更便于阅读。IE6 不遵循此声明。 */
+	min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
+	background: #FFF;
+	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐。如果将 .container 宽度设置为 100%，则不需要此设置。 */
+}
+
+/* ~~ 这是布局信息。 ~~ 
+
+1) 填充只会放置于 div 的顶部和/或底部。此 div 中的元素侧边会有填充。这样，您可以避免使用任何“方框模型数学”。请注意，如果向 div 自身添加任何侧边填充或边框，这些侧边填充或边框将与您定义的宽度相加，得出 *总计* 宽度。您也可以选择删除 div 中的元素的填充，并在该元素中另外放置一个没有任何宽度但具有设计所需填充的 div。
+
+*/
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+
+/* ~~ 其它浮动/清除类 ~~ */
+.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* 此类可用于在页面中使元素向左浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* 如果从 .container 中删除了 overflow:hidden，则可以将此类放置在 <br /> 或空 div 中，作为 #container 内最后一个浮动 div 之后的最终元素 */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="content">
+    <h1>FetionSDK.dll说明</h1>
+    <p><strong>前言</strong></p>
+    <p>这篇文章是基Fetionsdk.dll飞信端程序开发而写的里面的代码是我通过Reflector反编译中国移动开发的飞信2008中的fetionFx.exe研究的结果.Fetionsdk.dll的下载地址:</p>
+    <p><a href="http://sites.google.com/site/allwealthshare/software/FetionSDK.dll.rar?attredirects=0">http://sites.google.com/site/allwealthshare/software/FetionSDK.dll.rar?attredirects=0</a></p>
+    <p>移动的飞信客户端是用C#语言开发的,所以我们在利用fetionsdk.dll来开发自己的飞信客户端的时候也应采用C#语言来开发(我不清楚能不能用其他语言来开发,如C++).有一点需要说明的是,这个fetionsdk.dll是位能人反编绎而来的,难免会有些bug.例如:如果好友没有在分组里,则无法向其发送短信,也无法加载他的信息(解决方法:用移动的飞信登录后将其加入分组里).</p>
+    <p><strong>能实现的功能:</strong>    </p>
+    <p>1. 登录飞信,注销飞信,设置飞信登录状态.  2. 加载好友列表.  3. 得到好友列表的分组.  4. 加载飞信群成员列表.  5. 加载飞信好友图像(Portrait).  6. 加载任意飞信号图像(Portrait).  7. 发送即时信息,发送手机短信. 8. 接收飞信好友信息.  9. 添加飞信好友.</p>
+<p><strong>具体实现:</strong></p>
+<p>在引用里加入下面几个命名空间的引用:</p>
+<pre class="prettyprint">
+  Using NullStudio.Fetion_SDK;
+  Using Imps.Core;</pre>
+<p>当然还可能有其他的命名空间,这里就不一一写出. 几个重要的事件(这些应该在全局作用域内)</p>
+<pre class="prettyprint">
+  sdk.SDK_ReceiveMessage += newFetionSDK.SDK_ReceiveMessageEventHandler(sdk_SDK_ReceiveMessage);
+  sdk.SDK_UserSatusChange += newFetionSDK.SDK_UserSatusChangedEventHandler(sdk_SDK_UserSatusChange);
+  sdk.SDK_Error += new FetionSDK.SDK_ErrorEventHandler(sdk_SDK_Error);<br /></pre>
+<p>声明一个全局范围内的变量: Fetionsdk sdk (这是一个飞信控制的总类,作用于整个程序)</p>
+<p><strong>功能1</strong>(登录飞信,注销飞信,设置飞信登录状态)</p>
+<pre class="prettyprint lang-cpp">
+  //Fill手机号及密码.
+  sdk.AccountManager.FillUserIdandPassword(string id,string password,boolautoLoginOrout)
+  //自动判断是登录还是注销
+  sdk.AccountManager.LoginOrout();
+  //设置飞信登录状态,这里设置为在线(前提:飞信已经登录,可以在飞信登录状态为Logon时调用此方法)
+  sdk.AccountManager.CurrentUser.Presence.AsyncChangeMainPresence(Imps.Common.MainPresence.Online,Imps.Common.MainPresence.Online.ToString());</pre>
+<p><strong>功能2</strong>(加载好友列表)</p>
+<pre class="prettyprint lang-cpp">
+  sdk.ContactControl.getAllContactList();//返回一个类型为contact的列表List<Imps.Core.contact> 
+</pre></p>
+<p><strong>功能3</strong>(加载好友分组)</p>
+<pre class="prettyprint">
+  List<ContactGroup> cotactGroups =sdk.ContactControl.getContactGroup();
+  //可以在contactGroup中加载属于该组的好友列表
+  List<Contact>contacts = contactGroup.Contacts.ListContacts. 
+</pre>
+</p>
+<p><strong>功能4</strong>(加载群成员列表)</p>
+<pre class="prettyprint">
+  GroupBase groupBase = new GroupBase(sdk);
+  List<PersonalGroup> personalGroups =groupBase.getPersonalGroupList();
+  //下面的代码很重要,如若缺少,则personalGroups里只是一些基本信息,成员信息没有.
+  foreach (PersonalGroup personalGroup in personalGroups)
+  {
+      AsyncBizOperation op = new AsyncBizOperation();
+      lock (op)
+      {
+         sdk.AccountManager.CurrentUser.PersonalGroupManager.GetGroupMemberList(group,op);
+      }
+  }</pre>
+  <p><strong>功能5,6</strong>(加载图像)</p>
+  <p>首先要得到一个有效的Contact实例. 其次增加Contact.ContactInfo. PropertiesChanged事件. 最后在事件代码里完成图片的下载. 基本代码如下 :  </p>
+  <pre class="prettyprint">
+  IicUri uri = Uri.CreatUri(string MobileNo);
+  Contact contact =sdk.AccountManager.CurrentUser.ContactList.FindFindContactByMsisdnEx(uri.MobileNo);
+  If(contact==null)
+  {
+		AsyncBizOperation op = newAsyncBizOperation();
+     contact =sdk.AccountManager.CurrentUser.ContactList.FindOrCreateContact(uri.Raw, op);
+  }
+  //添加事件
+  contact.PersonalInfo.PropertiesChanged += newEventHandler<PropertiesChangedEventArgs>(PersonalInfo_PropertiesChanged);
+  void PersonalInfo_PropertiesChanged(object sender,PropertiesChangedEventArgs e)
+  {
+     //返回为 True时表示图像下载完毕
+     if(!e.ContainsAnyOfProperties(new string[] {"nickname","Provision", "Portrait" }))
+     {
+         pictureBox1.Image =((ContactInfo)sender).Portrait; 
+     }
+  }</pre>
+  <p><strong>功能7(</strong>发送消息<strong>)</strong>  </p>
+  <pre class="prettyprint">
+  sdk.ContactControl.SendSMS.SendSMS(friendPhone, msg);  //发送手机短信
+  sdk.ContactControl.SendIM.SendIM(friendPhone, msg);    //进行即时通信(注:通过contact.Presence.MainPresence在属性值确定用户状态,如:
+  Imps.Common.MainPresence.OfflineLogin,
+  Imps.Common.MainPresence.Offline);</pre>
+  <p><strong>功能8</strong>(接收好友信息)</p>
+  <p>接收信息前需要添加事件sdk.SDK_ReceiveMessage. 然后在事件中接收消息</p>
+<p><strong>功能9(</strong>添加飞信好友<strong>)</strong></p>
+<pre class="prettyprint">
+  //声明变量
+  bool isByMobileNo = false;       //是否以手机号码加飞信
+  string id = string.Empty;            //userId
+  string domain = string.Empty;         //域
+  Nullable<int> targetGroupId = null;       //添加到哪一组中(每个contactGroup能有一个ID属性)
+  string localName = string.Empty;           //本地备注
+  ContactList.AddBuddyExtraData extraData = newContactList.AddBuddyExtraData();
+  bool sendRequestAgain = false;
+  bool copyWhenExist = false;
+  Nullable<bool> invite = null;
+  AsyncBizOperation op = new AsyncBizOperation();
+  //赋值
+  IicUri uri = IicUri.CreateTelUri(friendNo);
+  id = uri.MobileNo;
+  isByMobileNo = true;
+  domain = "fetion";
+  targetGroupId = targetId;
+  localName = "//本地备注名"
+  extraData = new ContactList.AddBuddyExtraData();
+  extraData.WhoAmI = "//我是谁?"
+  sendRequestAgain = true;
+  copyWhenExist = false;
+  invite = null;
+  
+  //执行加入好友
+  op.ImpsError += newEventHandler<ImpsErrorEventArgs>(op_ImpsError);
+  op.Successed += new EventHandler(op_Successed);
+  sdk.AccountManager.CurrentUser.ContactList.AsyncAddBuddy(isByMobileNo,id, domain,targetGroupId, localName, extraData, sendRequestAgain,copyWhenExist, invite, op);</pre>
+  </div>
+</div></body>
+<script src="http://lxiongh.qiniudn.com/run_prettify.js"></script>
+</html>
