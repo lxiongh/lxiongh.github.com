@@ -193,6 +193,38 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
   op.ImpsError += newEventHandler<ImpsErrorEventArgs>(op_ImpsError);
   op.Successed += new EventHandler(op_Successed);
   sdk.AccountManager.CurrentUser.ContactList.AsyncAddBuddy(isByMobileNo,id, domain,targetGroupId, localName, extraData, sendRequestAgain,copyWhenExist, invite, op);</pre>
+  <hr />
+  <h1>FetionSDK实例</h1>
+  <p><strong>1. 自动化生日查询飞信扩展</strong></p>
+  <h3>注：这是09年时的成果，现在FetionSDK.dll已经不能使用。  </h3>
+  <p>经过多日的苦战,我的AbsExtend,即自动化生日查询飞信扩展这个软件终于写成了.这个软件主要实现了自动化生日查询,通过飞信发送短信(用fetionsdk做的).</p>
+  <p>首先让我说说AbsExtend的第一个功能:自动化生日查询.有关生日查询的软件,我在这个暑假之前已经完成了好3个.第一个是用Access完成的,但因为其要借助于Access才能正常使用,在没有装Access的电脑上就没法运行,有局限性.所以第二个我就用了VB来写就解决了运行平台的问题.在暑假刚学了C#,所以出现了第三个,C#版的.(更主要是我要写的飞信是基于FetionSDK的,所以选择了C#语言来完成AbsExtend)</p>
+  <p>我采用了基于Access数据库的生日查询,也许你会认为生日查询很简单,无非就是日期比较,而在Window中的日期本身就可以比较.但是情况却不是想象的这样.根据具体的情况,生日有农历与阳历之分,如果只是阳历的话就好办,但事与愿为.不光如此,农历又有闰月,这就给生日查询带来了难度.所以代码必须有阳历与农历之间的转换.</p>
+  <p>其次是AbsExtend的第二个功能:飞信扩展(即可以发送手机短信).我之所以加进这个功能,是因为我想,如果你查询到某人生日,那么你就可以通过飞信扩展向好友祝贺生日,方便快捷!这一功能主要是基于FetionSDK.dll开发,FetionSDK.dll网上有下载.在开发这个模块时是比较困难的,因为网上关于fetionsdk.dll的开发资料比较少,所以只能自己摸着石头过河.</p>
+  <p><img src="http://lxiongh.qiniudn.com/blog/2009-9-3/AbsExtend.JPG-mark" width="400" height="400" /> </p>
+  <p><a href="http://lxiongh.qiniudn.com/blog/2009-9-3/AbsExtend.zip">AbsExtend.zip</a></p>
+  <p><strong>2. FetionSDK加载飞信图像</strong> </p>
+  <p>加载飞信好友的图像Portra它属于 Contact.ContactInfo.Portrait)，首先要得到一个有效的 Contact 实例，其次增加 Contact.ContactInfo.  PropertiesChanged 事件，最后在事件代码里完成图片的下载。基本代码如下 :  </p>
+  <pre class="prettyprint">
+  IicUri uri = Uri.CreatUri(string MobileNo);
+  Contact contact = sdk.AccountManager.CurrentUser.ContactList.FindFindContactByMsisdnEx(uri.MobileNo);
+  If(contact==null)
+  {
+    AsyncBizOperation op = new AsyncBizOperation();
+    contact = sdk.AccountManager.CurrentUser.ContactList.FindOrCreateContact(uri.Raw, op);
+  }
+  // 添加事件
+  contact.PersonalInfo.PropertiesChanged += new EventHandler<PropertiesChangedEventArgs>(PersonalInfo_PropertiesChanged);
+  void PersonalInfo_PropertiesChanged(object sender, PropertiesChangedEventArgs e)
+  {
+    // 这里应该是一个循环 , 等返回为 True 时才表示图像下载完毕
+  while (!e.ContainsAnyOfProperties(new string[] { "nickname", "Provision", "Portrait" }))
+  {}
+  pictureBox1.Image = ((ContactInfo)sender).Portrait; 
+  }</pre>
+  <p>例如，可以得到任意一个飞信的头像。而飞信头像往往都是真实的个人照，想想真是恐怖。 </p>
+  <p><img src="http://lxiongh.qiniudn.com/blog/2009-9-3/FetionPortraitDemo.JPG-mark" width="267" height="155" /></p>
+  <p><a href="http://lxiongh.qiniudn.com/blog/2009-9-3/FetionPortraitDemo.rar">FetionPortraitDemo.rar</a></p>
   </div>
 </div></body>
 <script src="http://lxiongh.qiniudn.com/run_prettify.js"></script>
