@@ -45,7 +45,7 @@
         </header>
         <nav>
         <!--<span><a title="博客" class="" href="/">博客</a></span>-->
-        <span><a title="项目" class="" href="/">项目</a></span>
+        <span><a title="项目" class="" href="/project/">项目</a></span>
         <span><a title="分类" class="" href="/categories/">分类</a></span>
         <span><a title="标签" class="" href="/tags/">标签</a></span>
         <span><a title="链接" class="" href="/links/">链接</a></span>
