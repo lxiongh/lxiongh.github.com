@@ -1,5 +1,5 @@
 ---
-title: lxiongh' Homepage
+title: lxiongh' Blog
 layout: page
 ---
 
