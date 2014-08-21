@@ -88,7 +88,7 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
   <div class="content">
     <h2>
       <span><a title="项目" class="" href="/">项目</a></span>
-      <span><a title="博客" class="" href="/blog/">博客</a></span>
+      <span><a title="博客" class="" href="/blog.html">博客</a></span>
       <span><a title="分类" class="" href="/categories/">分类</a></span>
       <span><a title="标签" class="" href="/tags/">标签</a></span>
       <span><a title="链接" class="" href="/links/">链接</a></span>
