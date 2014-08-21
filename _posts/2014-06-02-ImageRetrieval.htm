@@ -88,17 +88,17 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
     <h1>A3: Leveraging Semantics with Attribute-associated Auxiliary References for General Image Retrieval</h1>
     <p>Being submission</p>
     <p><center>
-      <p><img src="ImageRetrievalFramework.png" width="510" height="638" /></p>
+      <p><img src="http://lxiongh.qiniudn.com/blog/2014-6-2/ImageRetrievalFramework.png" width="510" height="638" /></p>
     </center></p>
     <p>This paper develops a general framework of image retrieval, named A3, by introducing an auxiliary set of samples (image references), each of which is annotated with semantic attributes (tags). Given a query image (without tags), we first map it into the references by a non-convex sparse coding formulation, which jointly optimizes appearance reconstruction of the query and semantics consistency among references. A novel algorithm, namely semantic coherent coding (SCC), is presented to solve this optimization. As a result, a subset of references is selected to augment the query for retrieval. Then we can rank images to be retrieved by intuitively matching them together with the query and the constructed subset. The advantages of our approach are summarized as follows. (1) The auxiliary set of references gives rise to an alternating way for query augmentation while utilizing semantics. (2) The semantics of the references can be also propagated into the query and database images.</p>
     <h2>Experiments</h2>
     <p>Datasets: We validate the framework A3 on two public databases: Caltech-256 [20] and ImageNet [21]. The former dataset is employed for evaluating the performances of image retrieval, as most existing approaches also reporting results on it. We demonstrate another advantage of A3, i.e. semantic attribute discovery, on the ImageNet database, in which many images are not yet annotated with attributes. For both datasets, we split the data into auxiliary and retrieval set, use the auxiliary set(with annotated attributes) to augment the query through semantic-aware reconstruction and use the retrieval set to evaluate the performance. Semantic Attributes: We collect totally 81 attributes grouped into 5 categories ( including color, pattern, shape, part and material ), which represent image semantic from different aspects.</p>
-    <p><center><img src="fig1.png" width="769" height="267" /></center></p>
+    <p><center><img src="http://lxiongh.qiniudn.com/blog/2014-6-2/fig1.png" width="769" height="267" /></center></p>
       <p>Quantitative results of image retrieval on Caltech 256. We compare the precision of our retrieval results with existing methods including HSI [6], OASIS [5], LEGO [22] and LMNN [23] on 20 classes(left) and 50 classes(right) from Caltech-256. All curves except ours are copied from [6].    </p>
-    <p><center><img src="fig2.png" width="781" height="308" /></center></p>
+    <p><center><img src="http://lxiongh.qiniudn.com/blog/2014-6-2/fig2.png" width="781" height="308" /></center></p>
     <p>The average precision and recall curve for propagating attributes to images on the subset of ImageNet. The horizontal axis in each figure indicates the number of attributes propagated to each image. We compare the performances of ourmethod with the sparse coding algorithm FSS [19] in which the semantic coherency constraint is relaxed.
     <center>
-      <p><img src="Results.png" width="734" height="556" /></p>
+      <p><img src="http://lxiongh.qiniudn.com/blog/2014-6-2/Results.png" width="734" height="556" /></p>
       <p>Some retrieval results from Caltech-256</p>
     </center></p>
     <!-- end .content --></div>
