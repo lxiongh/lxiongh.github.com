@@ -4,7 +4,6 @@ layout: page
 ---
 
 <ul class="listing">
-<p><a href="http://lxiongh.github.io/2014/08/18/Project_list/">【置顶】 项目汇总链接 </a></p>
 {% for post in paginator.posts %}
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
   {% if year != y %}
