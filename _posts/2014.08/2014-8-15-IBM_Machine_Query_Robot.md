@@ -78,4 +78,4 @@ Properties:
 
 ---
 
-[Call Information Loader by CustomerId v0.1beta.xlsm](http://lxiongh.qiniudn.com/blog/2014-8-15/Call_Information_Loader_by_CustomerId_v0.2beta.xlsm)
+[Call Information Loader by CustomerId v0.2beta.xlsm](http://lxiongh.qiniudn.com/blog/2014-8-15/Call_Information_Loader_by_CustomerId_v0.2beta.xlsm)
