@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>飞思卡尔竞赛</title>
+<title>2010年第五届飞思卡尔智能汽车竞赛</title>
 <style type="text/css">
 <!--
 body {
@@ -47,20 +47,62 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 	min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
 	background: #FFF;
 	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐。如果将 .container 宽度设置为 100%，则不需要此设置。 */
+	overflow: hidden; /* 此声明将使 .container 清除其包含的所有浮动列。 */
 }
 
-/* ~~ 这是布局信息。 ~~ 
+/* ~~ 以下是此布局的列。 ~~ 
 
 1) 填充只会放置于 div 的顶部和/或底部。此 div 中的元素侧边会有填充。这样，您可以避免使用任何“方框模型数学”。请注意，如果向 div 自身添加任何侧边填充或边框，这些侧边填充或边框将与您定义的宽度相加，得出 *总计* 宽度。您也可以选择删除 div 中的元素的填充，并在该元素中另外放置一个没有任何宽度但具有设计所需填充的 div。
 
+2) 由于这些列均为浮动列，因此未对其指定边距。如果必须添加边距，请避免在浮动方向一侧放置边距（例如：div 中的右边距设置为向右浮动）。在很多情况下，都可以改用填充。对于必须打破此规则的 div，应向该 div 的规则中添加“display:inline”声明，以控制某些版本的 Internet Explorer 会使边距翻倍的错误。
+
+3) 由于可以在一个文档中多次使用类（并且一个元素可以应用多个类），因此已向这些列分配类名，而不是 ID。例如，必要时可堆叠两个侧栏 div。您可以根据个人偏好将这些名称轻松地改为 ID，前提是仅对每个文档使用一次。
+
+4) 如果您更喜欢在右侧（而不是左侧）进行导航，只需使这些列向相反方向浮动（全部向右，而非全部向左），它们将按相反顺序显示。您无需在 HTML 源文件中移动 div。
+
 */
+.sidebar1 {
+	float: left;
+	width: 20%;
+	background: #93A5C4;
+	padding-bottom: 10px;
+}
 .content {
+	padding: 10px 0;
+	width: 60%;
+	float: left;
+}
+.sidebar2 {
+	float: left;
+	width: 20%;
+	background: #93A5C4;
 	padding: 10px 0;
 }
 
 /* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
 .content ul, .content ol { 
 	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+
+/* ~~ 导航列表样式（如果选择使用预先创建的 Spry 等弹出菜单，则可以删除此样式） ~~ */
+ul.nav {
+	list-style: none; /* 这将删除列表标记 */
+	border-top: 1px solid #666; /* 这将为链接创建上边框 – 使用下边框将所有其它项放置在 LI 中 */
+	margin-bottom: 15px; /* 这将在下面内容的导航之间创建间距 */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* 这将创建按钮间隔 */
+}
+ul.nav a, ul.nav a:visited { /* 对这些选择器进行分组可确保链接即使在访问之后也能保持其按钮外观 */
+	padding: 5px 5px 5px 15px;
+	display: block; /* 这将为链接赋予块属性，使其填满包含它的整个 LI。这样，整个区域都可以响应鼠标单击操作。 */
+	text-decoration: none;
+	background: #8090AB;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* 这将更改鼠标和键盘导航的背景和文本颜色 */
+	background: #6F7D94;
+	color: #FFF;
 }
 
 /* ~~ 其它浮动/清除类 ~~ */
@@ -79,25 +121,49 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 	line-height: 0px;
 }
 -->
-</style></head>
+</style><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* 此 1px 负边距可以放置在此布局中的任何列中，且具有相同的校正效果。 */
+ul.nav a { zoom: 1; }  /* 缩放属性将为 IE 提供其需要的 hasLayout 触发器，用于校正链接之间的额外空白 */
+</style>
+<![endif]--></head>
 
 <body>
 
 <div class="container">
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="http://lxiongh.github.io/">主页</a></li>
+      <li><a href="http://lxiongh.github.io/categories/">分类</a></li>
+      <li><a href="http://lxiongh.github.io/tags/">标签</a></li>
+      <li><a href="http://lxiongh.github.io/about/">关于</a>    <!-- end .sidebar1 --></li>
+    </ul>
+  </div>
   <div class="content">
-    <p>设计小车的循线算法设计与实现，初赛华南赛区排名<strong>第6名</strong>（120支队），决赛继续领先完成比赛</p>
-    <p> <center>
-    <embed src="http://player.youku.com/player.php/sid/XNzU4ODg2MzMy/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="absmiddle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed> </center>
+    <h1>2010年第五届飞思卡尔智能汽车竞赛</h1>
+    <p>设计小车的循线算法设计与实现，初赛华南赛区排名<strong>第6名</strong>（120支队），决赛继续领先完成比赛。</p>
+    <p><center>
+      <embed src="http://player.youku.com/player.php/sid/XNzU4ODg2MzMy/v.swf" allowfullscreen="true" quality="high" width="565" height="480" align="absmiddle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed></center>
     </p>
-    <hr />
     <p>我们选择MC9S12XS128作为主控芯片，并且自己制作了最小系统板。赛道电磁信息采集我们使用了组委会推荐的使用电感的方法。采集到信息之后，我们对传感器的信息作相应的处理，可以准确地得出赛车中轴与黑线的距离，根据这个偏差经过一定的计算，得出舵机的转角和相应的车速，从而控制舵机和电机。在硬件方面，我们为了使电路更加简化，自己制作了最小系统板，使得单片机、电源、电机驱动等模块集中到了一块最小系统板上；同时为了增大前瞻，减小传感器的分布电容，我们将传感器单独做成一块板，放在车模比较靠前的位置。</p>
     <p>下面是我们此次参赛最后的报告文档：</p>
-    <p><center>
-    <object data="http://lxiongh.qiniudn.com/blog/2010-9-1/FreescaleReport.pdf" type="application/pdf" width="800" height="600" align="middle" >
-      <embed width="900" height="600" align="middle"></embed>     
-      alt : <a href="http://lxiongh.qiniudn.com/blog/2010-9-1/FreescaleReport.pdf">FreescaleReport.pdf</a>   </object>  </center>
-    </p>
-  <!-- end .content --></div>
+    <p>
+      <center>
+        <p>
+          <object data="http://lxiongh.qiniudn.com/blog/2010-9-1/FreescaleReport.pdf" type="application/pdf" width="580" height="433" align="middle" >
+            <embed width="580" height="433" align="middle"></embed>
+            alt : <a href="http://lxiongh.qiniudn.com/blog/2010-9-1/FreescaleReport.pdf">FreescaleReport.pdf</a>
+          </object>
+        </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <hr />
+        <p>All rights reserved by Liu XiongHao  </p>
+      </center>
+  </div>
+  <div class="sidebar2">
+    <p>全国大学生智能汽车竞赛是以智能汽车为研究对象的创意性科技竞赛，是面向全国大学生的一种具有探索性工程实践活动，是教育部倡导的大学生科技竞赛之一</p>
+    <!-- end .sidebar2 --></div>
   <!-- end .container --></div>
 </body>
 </html>
