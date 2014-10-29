@@ -15,16 +15,16 @@ brew install wxpython
 
 ### test for wxpython
 <code>
-import wx
-ouput error: "No Module name wx"
+<p>import wx</p>
+<p>ouput error: "No Module name wx"</p>
 </code>
 
 ### fix this problem
 选择相应的版本即可
 <code>
-import wxversion
-wxversion.select('3.0')
-import wx
+<p>import wxversion</p>
+<p>wxversion.select('3.0')</p>
+<p>import wx</p>
 </code>
 
 More Information, Please ref. to [link](http://0x55aa.sinaapp.com/算法-编程/121.html)
