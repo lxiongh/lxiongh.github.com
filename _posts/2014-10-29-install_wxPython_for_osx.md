@@ -13,6 +13,7 @@ tags : [wxPython,wx,MAC]
 
 ### test for wxpython
 > import wx
+
 > ouput error: "No Module name wx"
 
 ### fix this problem
@@ -20,7 +21,9 @@ tags : [wxPython,wx,MAC]
 选择相应的版本即可
 
 > import wxversion
+
 > wxversion.select('3.0')
+
 > import wx
 
 More Information, Please ref. to [link](http://0x55aa.sinaapp.com/算法-编程/121.html)
