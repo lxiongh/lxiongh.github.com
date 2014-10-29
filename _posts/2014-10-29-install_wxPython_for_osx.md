@@ -11,13 +11,13 @@ tags : [wxPython,wx,MAC]
 ### Install using brew tool
 <code>
 brew install wxpython
-<\code>
+</code>
 
 ### test for wxpython
 <code>
 import wx
 ouput error: "No Module name wx"
-<\code>
+</code>
 
 ### fix this problem
 选择相应的版本即可
@@ -25,6 +25,6 @@ ouput error: "No Module name wx"
 import wxversion
 wxversion.select('3.0')
 import wx
-<\code>
+</code>
 
 More Information, Please ref. to [link](http://0x55aa.sinaapp.com/算法-编程/121.html)
