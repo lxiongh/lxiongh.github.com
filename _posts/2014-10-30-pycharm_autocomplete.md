@@ -6,7 +6,7 @@ tags: [pycharm, opencv, wxpython, autocomplete]
 ---
 
 要想pycharm能够自动补全代码，需要将关键文件链接到目录/Library/Python/2.7/site-packages下，其他目录无效。
-当目录结构改变后，pycharm可能无法立刻产生变化，可以通知修改Project Interpreter来生效。
+当目录结构改变后，pycharm可能无法立刻产生变化，可以通过修改Project Interpreter来生效。
 
 ## opencv
 
