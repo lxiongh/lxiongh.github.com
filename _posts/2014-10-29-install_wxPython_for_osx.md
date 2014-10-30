@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Install wxPython in OSX
-category : others
+category : tips
 tagline: 
 tags : [wxPython,wx,MAC]
 ---
