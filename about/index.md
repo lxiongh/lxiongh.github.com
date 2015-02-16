@@ -11,9 +11,10 @@ comments: no
 
 ###联系方式：        
 
-个人邮箱: [xionghao.liu@gmail.com](mailto:xionghao.liu@gmail.com)     
-新浪微博: [零八斗](http://weibo.com/lxiongh/)	 
-豆瓣：[lxiongh](http://www.douban.com/people/lxiongh/)    
-github : [lxiongh](https://github.com/lxiongh)        
-twitter: [lxiongh](https://twitter.com/lxiongh)
+Email: [lxiongh@126.com](mailto:lxiongh@126.com)     
+Github: [https://github.com/lxiongh][1]       
+Gitcafe: [https://gitcafe.com/lxiongh][2]
+
+[1]: https://github.com/lxiongh
+[2]: https://gitcafe.com/lxiongh
 

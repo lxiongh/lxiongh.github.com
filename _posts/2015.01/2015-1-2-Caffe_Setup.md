@@ -35,6 +35,8 @@ commercial and optimized for Intel CPUs, with a free trial and student licenses.
 	
 申请链接 [https://software.intel.com/en-us/intel-parallel-studio-xe][1]
 
+> 在安装过程中，可能会出现要求输入 root 密码的问题，但因 Ubuntu 默认的 root 密码（不同于用户的管理员密码）是没有设置的，每次开机都会随机分配一个。在当前用户下输入 `sudo passpw` 即可修改 `root` 密码。
+
 [1]: https://software.intel.com/en-us/intel-parallel-studio-xe
 
 ## Library
@@ -72,6 +74,8 @@ Cuda 5.5 下载链接 [https://developer.nvidia.com/cuda-pre-production][2]，�
 
 Cuda 5.5 的安装及配置可参见博客 [http://www.zhaoyanpeng.cn/archives/352][3]
 
+> 注，Ubuntu 下显卡驱动的卸载最好不要用命令 `sudo apt-get remove --purge nvidia*`， 这样的卸载方式会出现一些奇怪的错误。最好借助 Ubuntu 中『系统设置->硬件->附加驱动』进行禁止即可。随后安装下载的 CUDA 驱动包。
+
 [2]: https://developer.nvidia.com/cuda-pre-production
 [3]: http://www.zhaoyanpeng.cn/archives/352
 
@@ -79,4 +83,6 @@ Cuda 5.5 的安装及配置可参见博客 [http://www.zhaoyanpeng.cn/archives/3
 	
 	cp Makefile.config.example Makefile.config
 	make
+
+> 如需要在无 GPU 的电脑上运行 Caffe 编译后的代码，则无需安装 CUDA 环境，上文提到的依赖库则是需要安装的。另外特别注意的是，需要设置 Caffe 只编译 CPU 版本的代码，即 `set CPU_ONLY := 1`
 
