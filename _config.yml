@@ -1,6 +1,7 @@
 markdown: rdiscount
 permalink: /:year/:month/:day/:title/
-url: http://lxiongh.github.com
+url: https://lxiongh.github.io
+production_url: https://lxiongh.github.io
 author: lxiongh
 pygments: true
 safe: true
