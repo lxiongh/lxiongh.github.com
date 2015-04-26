@@ -8,7 +8,7 @@ tags: [car, detection, localization, caffe window, window]
 
 [post_link]: http://lxiongh.com/2015/04/24/Caffe_Windows_Detection_Build/
 
-本人修改的 caffe detection (windows)（[gitcafe 链接][gitcafe_detection_src]，[github 链接][caffe_det_src]），针对车辆检测编译后的结果，目录中的主要文件如下所示。（注：Window 7 x64 位系统，GTX 650 GPU 显卡，没有在无显卡机下测试，不知是是否可运行）
+本人修改的 caffe detection (windows)（[gitcafe 链接][gitcafe_detection_src]，[github 链接][caffe_det_src]），针对车辆检测编译后的结果，目录中的主要文件如下所示。（注：本机为Window 7 x64 位系统，GTX 650 GPU 显卡。在无显卡机上请使用CPU模式运行）
 
     images/                    -> 存储了一些测试用图片
     base.prototxt              -> 网络结构定义，匆删除匆修改
@@ -17,25 +17,12 @@ tags: [car, detection, localization, caffe window, window]
     det_net.exe                -> 车辆检测主程序
     easy_go.py                 -> python 粘接检测过程，使检测更友好，建议使用
     
-    leveldb_cc_dll.dll         -> 运用依赖动态链接库
-    libgcc_s_sjlj-1.dll
-    libgfortran-3.dll
-    libglog.dll
-    libopenblas.dll
-    libquadmath-0.dll
-    libwinpthread-1.dll
-    opencv_core248.dll
-    opencv_core248d.dll
-    opencv_highgui248.dll
-    opencv_highgui248d.dll
-    opencv_imgproc248.dll
-    opencv_imgproc248d.dll
-    opencv_objdetect248.dll
-    opencv_objdetect248d.dll
+    *.dll                      -> 一些必要的动态运行库
 
-> 因为模型及相关文件过大，压缩后的大小为 218M，所以上传至了百度网盘 [http://pan.baidu.com/s/1i3vhoI5][build]，可自行前往下载。相应代码修改可参见 [博文: Caffe Window 版本][caffe_win_post]
+> 编译后的版本与模型文件过大，压缩后的大小为 374.2M，所以上传至了百度网盘 [http://pan.baidu.com/s/1kT1OQTT][build]，可自行前往下载。相应代码修改可参见 [博文: Caffe Window 版本][caffe_win_post]
 
 [caffe_win_post]: http://lxiongh.com/2015/04/23/Caffe_Windows_Detection/
+[build]: http://pan.baidu.com/s/1kT1OQTT
 
 
 # det_net.exe
@@ -49,7 +36,6 @@ tags: [car, detection, localization, caffe window, window]
 > 注意：如果用 `det_net.exe` 作检测，文件 `base.prototxt` 里的 `source` 及 `meanfile` 需要做相应的修改，指定到其绝对路径。但不建议这么做，因为提供了 `easy_go.py` 这个更加简便的方法调用 `det_net.exe` 作车辆检测，其隐藏了一些调用细节。
 
 [gitcafe_detection_src]: https://gitcafe.com/lxiongh/Caffe_Windows_Detection
-[build]: http://pan.baidu.com/s/1i3vhoI5
 [caffe_det_src]: https://github.com/lxiongh/Caffe_Windows_Detection
 
 
