@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Caffe Window 版本
+title:  Caffe Window 代码修改（适用于车辆定位）
 category: code
 tags: [Deep Learning, Caffe, caffe window, window]
 ---
