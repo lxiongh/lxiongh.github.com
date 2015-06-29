@@ -37,3 +37,5 @@ The most semantic segmentation results are shown below,
 ![s0](https://raw.githubusercontent.com/lxiongh/lxiongh.github.com/master/_posts/image/scene_parsing/s2.jpg)
 
 ![s0](https://raw.githubusercontent.com/lxiongh/lxiongh.github.com/master/_posts/image/scene_parsing/s3.jpg)
+
+The more semantic segmentation results are available in supplementary material please refer to the site: [http://lxiongh.qiniudn.com/scene_parsing_supplementary_material.pdf](http://lxiongh.qiniudn.com/scene_parsing_supplementary_material.pdf)
