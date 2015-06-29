@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 数据驱动下的图像场景分析
+title: Scene Parsing (ICME 2014, MM 2015)
 category : research
 tagline: 
 tags : [Scene Parsing, Algorithm]
@@ -9,6 +9,8 @@ tags : [Scene Parsing, Algorithm]
 Abstract
 ---
 *Data-Driven Scene Understanding by Adaptive Exemplar Retrieval*, **Xionghao Liu**, Wei Yang, Liang Lin, and Jian-Huang Lai, Proc. of IEEE International Conference on Multimedia and Expo (ICME), 2014. 
+
+*Data-Driven Scene Understanding with Adaptively Retrieved Exemplars*, **Xionghao Liu**, Wei Yang, Liang Lin, Qing Wang, Zhaoquan Cai, Jianhuang Lai, MultiMedia, IEEE  (Volume:PP ,  Issue: 99 )
 
 ---
 
